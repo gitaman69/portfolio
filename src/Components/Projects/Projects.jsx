@@ -16,8 +16,8 @@ const Projects = () => {
         </div>
         <div className="buttons1">
             <div className="btn1">
-                <button className="btnG1 btn">Github</button>
-                <button className="btnD2 btn">Demo</button>
+                <button className="btnG1 btn"><a href="https://github.com/gitaman69/travels">Github</a></button>
+                <button className="btnD2 btn"><a href="https://gitaman69.github.io/travels/">Demo</a></button>
             </div>
         </div>
       </div>
@@ -33,8 +33,8 @@ const Projects = () => {
         </div>
         <div className="buttons2">
             <div className="btn2">
-                <button className="btnG2 btn">Github</button>
-                <button className="btnG2 btn">Demo</button>
+                <button className="btnG2 btn"><a href="https://github.com/gitaman69/movies-rating">Github</a></button>
+                <button className="btnG2 btn"><a href="https://gitaman69.github.io/movies-rating/">Demo</a></button>
             </div>
         </div>
       </div>
@@ -47,8 +47,8 @@ const Projects = () => {
         </div>
         <div className="buttons3">
             <div className="btn3">
-                <button className="btnG3 btn">Github</button>
-                <button className="btnD3 btn">Demo</button>
+                <button className="btnG3 btn"><a href="https://github.com/gitaman69/tic-tac-toe">Github</a></button>
+                <button className="btnD3 btn"><a href="https://gitaman69.github.io/tic-tac-toe/">Demo</a></button>
             </div>
         </div>
       </div>
