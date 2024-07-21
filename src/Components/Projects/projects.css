@@ -37,8 +37,9 @@
   justify-content: space-evenly;
   align-items: center;
 }
-.card-container .card1 .buttons1 .btn1 .btn {
+.card-container .card1 .buttons1 .btn1 a {
   background-color: rgba(0, 213, 255, 0.701);
+  color: white;
 }
 .card-container .card2 {
   background: rgba(0, 0, 0, 0.501);
@@ -68,8 +69,9 @@
   justify-content: space-evenly;
   align-items: center;
 }
-.card-container .card2 .buttons2 .btn2 .btn {
+.card-container .card2 .buttons2 .btn2 a {
   background-color: rgba(0, 213, 255, 0.701);
+  color: white;
 }
 .card-container .card3 {
   background: rgba(0, 0, 0, 0.501);
@@ -99,8 +101,9 @@
   justify-content: space-evenly;
   align-items: center;
 }
-.card-container .card3 .buttons3 .btn3 .btn {
+.card-container .card3 .buttons3 .btn3 a {
   background-color: rgba(0, 213, 255, 0.701);
+  color: white;
 }
 
 @media screen and (max-width: 1200px) {
