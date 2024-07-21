@@ -1,0 +1,51 @@
+.homeContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh; // Full viewport height
+    margin: 0;
+    padding: 0;
+    //overflow: hidden; // Prevent scrolling
+
+    .leftPart {
+        flex: 1;
+        margin-left: 10vw; // Adjust for spacing
+        text-align: left;
+
+        .heading {
+            color: white;
+            font-weight: 400;
+        }
+
+        .name {
+            margin-top: 4vh;
+            color: white;
+            font-weight: 400;
+
+            .mainName {
+                margin-left: 1.5vh;
+                color: rgb(255, 228, 24);
+                font-weight: 450;
+            }
+        }
+    }
+
+    .rightPart {
+        flex: 1;
+        margin-right: 20vw; // Adjust for spacing
+        display: flex;
+        justify-content: flex-end;
+
+        .imgLogo {
+            display: flex;
+            align-items: center;
+            margin-top: 5vh;
+
+            .homeLogo {
+                width: 100%;
+                max-width: 300px; // Limit the maximum size
+                height: auto;
+            }
+        }
+    }
+}
