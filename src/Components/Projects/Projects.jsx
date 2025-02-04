@@ -66,7 +66,7 @@ const Projects = () => {
               <a href="https://github.com/gitaman69/movies-rating">
                 <button className="btnG2 btn">Github</button>
               </a>
-              <a href="https://gitaman69.github.io/movies-rating/">
+              <a href="https://movies-rating.onrender.com/">
                 <button className="btnG2 btn">Demo</button>
               </a>
             </div>
