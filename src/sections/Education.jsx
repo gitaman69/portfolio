@@ -19,7 +19,7 @@ const Education = () => (
                 </div>
                 <div className="edu__right">
                   <span className="mono small">{e.year}</span>
-                  <span className="muted small">{e.score}</span>
+                  {e.score && <span className="muted small">{e.score}</span>}
                 </div>
               </li>
             ))}

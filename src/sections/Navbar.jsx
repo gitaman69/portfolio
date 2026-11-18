@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
-import { useActiveSection } from "../hooks";
+import { FiSun, FiMoon } from "react-icons/fi";
+import { useActiveSection, useTheme } from "../hooks";
 import { profile } from "../data";
 
 const LINKS = [
@@ -16,6 +17,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const active = useActiveSection(IDS);
+  const [theme, toggleTheme] = useTheme();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -55,14 +57,24 @@ const Navbar = () => {
           </a>
         </nav>
 
-        <button
-          className="nav__toggle"
-          aria-label={open ? "Close menu" : "Open menu"}
-          aria-expanded={open}
-          onClick={() => setOpen((o) => !o)}
-        >
-          {open ? <HiX /> : <HiOutlineMenuAlt3 />}
-        </button>
+        <div className="nav__actions">
+          <button
+            className="theme-toggle"
+            onClick={toggleTheme}
+            aria-label={theme === "light" ? "Switch to dark theme" : "Switch to light theme"}
+            title={theme === "light" ? "Dark mode" : "Light mode"}
+          >
+            {theme === "light" ? <FiMoon /> : <FiSun />}
+          </button>
+          <button
+            className="nav__toggle"
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            onClick={() => setOpen((o) => !o)}
+          >
+            {open ? <HiX /> : <HiOutlineMenuAlt3 />}
+          </button>
+        </div>
       </div>
     </header>
   );

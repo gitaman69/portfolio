@@ -81,3 +81,26 @@ export function useCountUp(target, duration = 1600) {
 
   return [ref, value];
 }
+
+const getInitialTheme = () => {
+  const attr = document.documentElement.getAttribute("data-theme");
+  if (attr === "light" || attr === "dark") return attr;
+  return window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+};
+
+/** Light/dark theme stored on <html data-theme>, remembered in localStorage. */
+export function useTheme() {
+  const [theme, setTheme] = useState(getInitialTheme);
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute("content", theme === "light" ? "#f6f7f9" : "#07080c");
+    try {
+      localStorage.setItem("theme", theme);
+    } catch (e) {}
+  }, [theme]);
+
+  const toggle = () => setTheme((t) => (t === "light" ? "dark" : "light"));
+  return [theme, toggle];
+}

@@ -156,7 +156,7 @@ export const skills = [
 ];
 
 export const education = [
-  { degree: "B.Tech, Electrical Engineering", school: "Malaviya National Institute of Technology, Jaipur", score: "CGPA 6.50", year: "2022 — 2026" },
+  { degree: "B.Tech, Electrical Engineering", school: "Malaviya National Institute of Technology, Jaipur", year: "2022 — 2026" },
   { degree: "Senior Secondary (XII)", school: "CBSE", score: "93.0%", year: "2021" },
   { degree: "Secondary (X)", school: "CBSE", score: "93.0%", year: "2019" },
 ];
