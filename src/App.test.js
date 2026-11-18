@@ -1,8 +1,14 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
+beforeAll(() => {
+  window.matchMedia = window.matchMedia || (() => ({ matches: true, addListener() {}, removeListener() {} }));
+});
+
+test("renders name and key sections", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  expect(screen.getAllByText(/Aman Bhakar/i).length).toBeGreaterThan(0);
+  expect(screen.getByRole("heading", { name: "ElectricQ" })).toBeInTheDocument();
+  expect(screen.getByRole("heading", { name: "BillGram" })).toBeInTheDocument();
+  expect(screen.getByRole("heading", { name: /Full Stack Developer/i })).toBeInTheDocument();
 });

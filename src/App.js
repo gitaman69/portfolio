@@ -1,25 +1,35 @@
-import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navbar from './Components/Navbar/Navbar';
-import Home from './Components/Home/Home';
-import Skills from './Components/Skills/Skills';
-import Footer from './Components/Footer/Footer';
-import Projects from './Components/Projects/Projects';
+import "./App.css";
+import Navbar from "./sections/Navbar";
+import Hero from "./sections/Hero";
+import About from "./sections/About";
+import Experience from "./sections/Experience";
+import Projects from "./sections/Projects";
+import Skills from "./sections/Skills";
+import Education from "./sections/Education";
+import Contact from "./sections/Contact";
+import Footer from "./sections/Footer";
+import { useRevealOnScroll } from "./hooks";
 
-
-const App =  () => {
+const App = () => {
+  useRevealOnScroll();
   return (
-    <BrowserRouter>
-      <Navbar/>
-      <Routes>
-        <Route path='/' element={<Home/>} />
-        <Route path='/skills' element={<Skills/>} />
-        <Route path='/projects' element={<Projects/>} />
-        {/*<Route path='/' element={<Contacts/>} />*/}
-      </Routes>
-      {/* <Footer/> */}
-    </BrowserRouter>
+    <>
+      <a href="#main" className="skip-link">Skip to content</a>
+      <div className="bg-grid" aria-hidden="true" />
+      <div className="bg-glow" aria-hidden="true" />
+      <Navbar />
+      <main id="main">
+        <Hero />
+        <About />
+        <Experience />
+        <Projects />
+        <Skills />
+        <Education />
+        <Contact />
+      </main>
+      <Footer />
+    </>
   );
-}
+};
 
 export default App;
